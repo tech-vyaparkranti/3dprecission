@@ -6,149 +6,342 @@
 
     <!-- aboutus Section -->
     <div class="destinations pt-5 pb-2">
-        <div class="custom-container">
-            <!-- <div class="site-title">
-                <h2 class="text-center">About Us</h2>
+    <div class="custom-container">
+        <div class="col-12 mb-4 offerings-container">
+            <div class="">
+                <h1 class="text-start" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:500">About <span style="color:green">Us</span></h1>
             </div>
-            <div class="about-image">
-                <img src="./assets/img/chilli.jpg" alt="" style="object-fit: cover;
 
-    height: 300px;
-    width: 400px;">
-                <div class="about-text">
-            <p >{!! isset($aboutText['0']->sort_about_us) ? $aboutText['0']->sort_about_us : 'Please fill about data from admin panel.'  !!}</p>
-</div>
-</div> -->
-<div class="col-md-12 mb-4 offerings-container">
-<div class="site-title">
-                <h2  class="text-center">About Us</h2>
-            </div>
-                    <div class="offerings-block">
-                        <div class="offerings-content" >
-                       <p class="text-justify">{!! $home_about_content ?? 'Adiyogi Global is dedicated to providing healthy, high-quality products to customers worldwide. With
-                        over 12 years of experience, we source the finest goods directly from top farmers and manufacturers
-                        across India. Our commitment to quality and transparency ensures that every product meets the highest
-                        standards of purity and freshness. We take pride in earning the trust of our customers through
-                        exceptional service and a deep dedication to their well-being. At Adiyogi Global, we bring the best of
-                        India to the world, always prioritizing quality and care.Customer trust is the foundation of Adiyogi Global. We are committed to earning and maintaining this
-                        trust through transparency, integrity, and exceptional service. From your first interaction with us, we
-                        aim to provide a seamless and satisfying experience.' !!}</p>
-
-                        </div>
-                        <div class="offerings-figure"data-aos="fade-right">
-                            <img src="{{ asset($home_about_image ?? './assets/img/Random Pics.jpeg') }}" class="img-fluid rounded" width="" height="" alt="Bikaner">
-                        </div>
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-lg-7 col-md-12 mb-3 mb-lg-0">
+                    <div class="offerings-content">
+                        <p class="text-justify">
+                            {!! $home_about_content ?? 
+                            'Adiyogi Global is dedicated to providing healthy, high-quality products to customers worldwide. With
+                            over 12 years of experience, we source the finest goods directly from top farmers and manufacturers
+                            across India. Our commitment to quality and transparency ensures that every product meets the highest
+                            standards of purity and freshness. We take pride in earning the trust of our customers through
+                            exceptional service and a deep dedication to their well-being. At Adiyogi Global, we bring the best of
+                            India to the world, always prioritizing quality and care. Customer trust is the foundation of Adiyogi
+                            Global. We are committed to earning and maintaining this trust through transparency, integrity, and
+                            exceptional service. From your first interaction with us, we aim to provide a seamless and satisfying
+                            experience.' 
+                            !!}
+                        </p>
+                        <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">Read More</button>
                     </div>
                 </div>
 
+                <!-- Image -->
+<div class="col-lg-5 col-md-12 text-center" data-aos="fade-right">
+    <div class="offerings-figure pro-3d-effect" style="">
+        <img src="{{ asset($home_about_image ?? './assets/img/Random Pics.jpeg') }}" 
+             class="img-fluid rounded shadow" 
+             alt="Bikaner">
+    </div>
+</div>
+
+            </div>
         </div>
     </div>
-    <!-- About Section End
-    <section class="chairperson">
-        <div class="custom-container">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="chairperson-figure pb-5">
-                        <?php if(!empty($getChairManData['0']->image)) { ?>
-                        <img src="<?php echo url($getChairManData['0']->image)?>" width="" height="" class="img-fluid" alt="Chairperson's" />
-                        <?php } else{ ?>
-                            <img src="assets/img/Mukesh-Kumar-Pandey-ji.png" width="" height="" class="img-fluid" alt="Chairperson's" />
-                            <?php } ?>
-                    </div>
-                </div>
-                <div class="col-md-8">
-            <?php if(!empty($getChairManData['0']->message)) { ?>
-                <div class="chairperson-content">
-                    <h3>Message from Chairperson’s Desk</h3>
-                    <p><b>Welcome!</b><br>
-                       {!! $getChairManData['0']->message  !!}</b><br><span>(<?php echo $getChairManData['0']->name?>)</span></p>getChairManData
-                </div>
-                <?php } else { ?>
-                    <div class="chairperson-content">
-                        <h3>Message from Chairperson’s Desk</h3>
-                        <p><b>Welcome!</b><br>
-                            I am immensely proud of the journey KRISHIDHA FPO has undertaken. We started with a vision to empower our fellow farmers and transform their livelihoods. Today, seeing hundreds of families thriving under our umbrella fills me with immense satisfaction. Our commitment is unwavering. We will continue to work relentlessly to provide our farmers with the resources, knowledge, and support they need to achieve agricultural success. Join us on this journey of growth and prosperity!<br><b>Warm regards,</b><br><span>(Mr. Mukesh Kumar Pandey)</span></p>getChairManData
-                    </div>
-                 <?php }?>
+</div>
 
-                </div>
-            </div>
-        </div>
-    </section> -->
+   <style>
+    /* Container styling */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+}
+
+/* Card setup */
+.card {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  perspective: 1000px; /* Required for 3D effect */
+}
+
+/* Inner wrapper that rotates */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Rotate the whole inner on hover */
+.card:hover .card-inner,
+.card:focus-within .card-inner {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+/* Front & back */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Front side */
+.card-front {
+  background: white;
+  color: #333;
+}
+
+/* Back side */
+.card-back {
+  background: #ff6b35;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Responsive tweaks */
+
+/* Medium devices (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .card-container {
+    padding: 30px 20px;
+    gap: 18px;
+  }
+}
+
+/* Small devices (phones in landscape) */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 20px 15px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .card {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* Extra small devices (phones portrait) */
+@media (max-width: 480px) {
+  .card-container {
+    padding: 15px 10px;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+  .card {
+    aspect-ratio: auto; /* let height adjust based on content */
+    min-height: 320px;  /* minimum height for usability */
+  }
+  .card-front img,
+  .card-back img {
+    width: 50px !important;
+    margin-bottom: 12px !important;
+  }
+  .card-front h3,
+  .card-back h3 {
+    font-size: 1.1rem;
+  }
+  .card-front p,
+  .card-back p {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+}
+
+/* Accessibility: focus state for keyboard users */
+.card:focus-within {
+  outline: 2px solid #4cafef;
+  outline-offset: 4px;
+}
+
+</style>
+
+<div class="card-container" >
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+     <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>  
+      <h3 style="font-size:17px;font-weight:bold">Seamlessly integrated feature</h3>
+        <p>Supports the team members and focuses on giving quality services...</p>
+      </div>
+      <div class="card-back">
+        <p>This feature ensures teamwork efficiency, streamlined communication, and productivity.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+       <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
+      <h3 style="font-size:17px;font-weight:bold">Advanced Analytics</h3>
+        <p>Provides in-depth reports to track performance and growth...</p>
+      </div>
+      <div class="card-back">
+        <p>Analyze trends, measure KPIs, and optimize your strategy for success.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+     <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
+             <h3 style="font-size:17px;font-weight:bold">Cloud Integration</h3>
+        <p>Access your data securely from anywhere in the world...</p>
+      </div>
+      <div class="card-back">
+        <p>Seamless cloud sync keeps your projects and team updated in real-time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+   <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
+        <h3 style="font-size:17px;font-weight:bold">Customer Support</h3>
+        <p>Round-the-clock assistance for all your needs...</p>
+      </div>
+      <div class="card-back">
+        <p>Our 24/7 support ensures your business runs without interruption.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
    <!-- Destinations Section -->
+<style>
+/* Swiper slide base */
+.swiper-slide .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: #ff6b35; /* orange */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 8px;
+  
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    width 0.4s ease,
+    opacity 0.4s ease;
+  z-index: 10;
+}
+
+.swiper-slide:hover .hover-overlay {
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+</style>
+
 <div class="destinations pt-5 pb-4" data-aos="fade-up">
   <div class="custom-container">
-    <div class="site-title pb-4">
-            <h2 class="text-center">Our Services</h2>
-        </div>
+    <div class="pb-4">
+      <h1 class="text-center" style="font-family:'Playfair Display', serif; font-weight:500; color:#ff6b35;">
+        Our <span style="color:green">Services</span>
+      </h1>
+    </div>
 
-        <div class="swiper we-offer">
-            <div class="swiper-wrapper">
+    <div class="swiper we-offer">
+      <div class="swiper-wrapper">
 
-                @if ($home_products->count())
-                    @foreach ($home_products as $item)
-                        <div class="swiper-slide">
-                            <div class="destinations-block">
-                                <div class="destinations-figure">
-                                    <img src="{{ asset($item->image) }}" class="img-fluid" alt="Destinations">
-                                </div>
-                                <span class="destinations-title mh-auto text-center">{{ $item->heading_top }}</span>
-                            </div>
-                        </div>
-                    @endforeach
-                @else
-                    <div class="swiper-slide">
-                        <div class="destinations-block">
-                            <div class="destinations-figure">
-                                <img src="./assets/img/Basmati rice.jpeg" class="img-fluid" alt="Destinations">
-                            </div>
-                            <span class="destinations-title mh-auto text-center">Basmati Rice</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="destinations-block">
-                            <div class="destinations-figure">
-                                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Destinations">
-                            </div>
-                            <span class="destinations-title mh-auto text-center">Ground Spices</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="destinations-block">
-                            <div class="destinations-figure">
-                                <img src="./assets/img/Fruit & Vegitables 2.jpg" class="img-fluid" alt="Destinations">
-                            </div>
-                            <span class="destinations-title mh-auto text-center">Fresh Fruits & Vegetables</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="destinations-block">
-                            <div class="destinations-figure">
-                                <img src="./assets/img/Non Basmati Rice 2.jpg" class="img-fluid" alt="Destinations">
-                            </div>
-                            <span class="destinations-title mh-auto text-center">Non Basmati Rice</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="destinations-block">
-                            <div class="destinations-figure">
-                                <img src="./assets/img/fresh-fruits-berries-.jpg" class="img-fluid" alt="Destinations">
-                            </div>
-                            <span class="destinations-title mh-auto text-center">Fresh Fruits</span>
-                        </div>
-                    </div>
-                @endif
+        @if ($home_products->count())
+          @foreach ($home_products as $item)
+            <div class="swiper-slide">
+              <div class="destinations-block">
+                <div class="destinations-figure">
+                  <img src="{{ asset($item->image) }}" class="img-fluid" alt="Destinations" />
+                </div>
+                <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">{{ $item->heading_top }}</span>
 
-            </div>
+                <!-- Hover overlay content -->
+                <div class="hover-overlay">
+                  More details about <br> {{ $item->heading_top }}
+                </div>
+              </div>
+            </div>
+          @endforeach
+        @else
+          <!-- Example fallback slides with hover overlay -->
+          <div class="swiper-slide">
+            <div class="destinations-block">
+              <div class="destinations-figure">
+                <img src="./assets/img/Basmati rice.jpeg" style="" class="img-fluid" alt="Destinations" />
+              </div>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Basmati Rice</span>
+              <div class="hover-overlay">
+                More details about <br> Basmati Rice
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="destinations-block">
+              <div class="destinations-figure">
+                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Destinations" />
+              </div>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Ground Spices</span>
+              <div class="hover-overlay">
+                More details about <br> Ground Spices
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="destinations-block">
+              <div class="destinations-figure">
+                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Destinations" />
+              </div>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Ground Spices</span>
+              <div class="hover-overlay">
+                More details about <br> Ground Spices
+              </div>
+            </div>
+          </div>
+          <!-- Add other fallback slides similarly -->
+        @endif
 
-            <div class="swiper-pagination"></div>
-        </div>
+      </div>
 
-        <div class="view-button text-center pt-4">
-            <a href="{{ route('productPage') }}">Know more</a>
-        </div>
-    </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  
+  </div>
 </div>
 <!-- Destinations Section End -->
 
