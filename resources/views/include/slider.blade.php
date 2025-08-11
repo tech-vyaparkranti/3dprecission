@@ -69,24 +69,25 @@
 /* Common arrow button style */
 .swiper-button-prev,
 .swiper-button-next {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 3 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+  font-size:10px;
 }
 
 /* Default arrows */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 20px;
+  
+  font-size: 5px;
   color: white;
   line-height: 60px;
   text-align: center;
@@ -96,6 +97,7 @@
 /* Left arrow icon */
 .swiper-button-prev::after {
   content: "\f104"; /* fa-angle-left */
+  font-size:10px;
 }
 
 /* Right arrow icon */

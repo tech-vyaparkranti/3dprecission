@@ -1,5 +1,5 @@
 @extends('layouts.webSite')
-@section('title', 'RN Communication ')
+@section('title', '3dprecission ')
 @section('content')
     {{-- @include('include.navigation') --}}
     @include('include.slider')
@@ -454,10 +454,164 @@
 </div>
 </div>
  Why Choose Us Section Starts -->
+<section class="industries">
+  <!-- Black overlay -->
+  <div class="bg-overlay"></div>
+
+  <h2 class="section-title">Industries We <span style="color:green">Serve</span></h2>
+  
+  <div class="industries-grid">
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Telecom</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Aerospace</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Automobile</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Construction</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Manufacturing</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Oil and Gas</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Logistics</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Print</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Power</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Marine</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Steel</p>
+    </div>
+    <div class="industry-item">
+      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <p>Chemical</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.industries {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  background: url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black opacity */
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+}
+
+.industries-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.industry-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.industry-item:hover {
+  transform: translateY(-5px);
+  border-color: #4a3aff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.icon-bounce {
+  display: inline-block;
+  animation: upDown 1s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .industries-grid {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- 
 <section class="our-service pt-5 pb-5">
     <div class="custom-container">
         <div class="section-heading mb-4">
-            <h2 class="text-center">Why choose us</h2>
+            <h1 class="text-center" style="color:#ff6b35;font-family:'Playfair Display', serif">Why Choose <span style="color:green"> Us ?</span></h1>
         </div>
         <div class="row" id="ourServices">
             <div class="col-md-4 mb-4">
@@ -515,8 +669,342 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Why Choose Us Section Ends -->
+
+<section class="why-choose-us py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-family: 'Playfair Display', serif;color:#ff6b35">
+        Why <span style="color:green">Choose Us</span>
+      </h2>
+      <p class="text-muted">We combine innovation, quality, and dedication to deliver exceptional results.</p>
+    </div>
+
+    <!-- 4 Cards in One Row -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center p-4">
+          <i class="bi bi-award-fill text-primary"></i>
+          <h5 class="mt-3">Experienced Team</h5>
+          <p class="text-muted">Our experts bring years of industry knowledge to deliver excellence.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center p-4">
+          <i class="bi bi-graph-up-arrow text-success"></i>
+          <h5 class="mt-3">Proven Results</h5>
+          <p class="text-muted">A track record of measurable growth and success for our clients.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center p-4">
+          <i class="bi bi-lightbulb-fill text-warning"></i>
+          <h5 class="mt-3">Innovative Solutions</h5>
+          <p class="text-muted">Creative and tech-driven approaches to complex challenges.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card text-center p-4">
+          <i class="bi bi-people-fill text-danger"></i>
+          <h5 class="mt-3">Customer Focused</h5>
+          <p class="text-muted">Your satisfaction is our priority, and we go the extra mile to achieve it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 3D Animation Setup */
+.why-choose-us {
+  background: #f9f9f9;
+  perspective: 1000px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Card 3D Effect */
+.feature-card:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Infinite Up-Down Icon Animation ONLY on Hover */
+@keyframes iconUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.feature-card:hover i {
+  animation: iconUpDown 0.8s infinite ease-in-out;
+  color: #ff6b35 !important;
+}
+
+.feature-card h5 {
+  font-weight: bold;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+</style>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+
+<!-- Testimonial Section -->
+<section class="testimonial-section ">
+  <div class="container text-center">
+    <h2 class="fw-bold" style="font-family: 'Playfair Display', serif; margin-bottom: 40px; color: #fff !important;">
+      What People <span>Say About Us?</span>
+    </h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper testimonial-slider">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+          <p class="testimonial-text">
+            “I got an exact solution for my CMM inspection report from here. I got an exact solution for my CMM inspection report from here. T I got an exact solution for my CMM inspection report from here. T I got an exact solution for my CMM inspection report from here. TThe employees are very good and supportive. They completed my work on time. Scanotech Informatics is the best scanning company I have ever seen.”
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide" style="  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;">
+          <p class="testimonial-text">
+            “Exceptional service and attention to detail. They really care about delivering top-quality results.”
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide" style="  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;">
+          <p class="testimonial-text">
+            “Professional team and quick turnaround. I recommend them without hesitation.”
+          </p>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper CSS -->
+
+<style>
+/* Section Background */
+.testimonial-section {
+  display: flex !important;
+  flex-direction: column !important; /* stack title + slider vertically */
+  align-items: center !important;
+  min-height: 300px !important; /* increased height */
+  padding: 40px 20px !important; /* more padding */
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('https://cdn.pixabay.com/photo/2023/08/07/10/45/bird-8172910_1280.jpg') center/cover no-repeat !important;
+  box-sizing: border-box !important;
+}
+
+/* Swiper Slide Centering */
+
+
+/* Testimonial Text */
+.testimonial-text {
+  max-width: 900px !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  padding: 0 15px 30px 15px !important; /* bottom padding creates space before pagination */
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+  margin-top: 15px !important; /* extra space from text */
+  display: flex !important;
+    justify-content: center !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: orange !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+  border: 2px solid orange !important;
+}
+
+</style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper('.testimonial-slider', {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+</script>
+
+
+
+
+<!-- Swiper CSS -->
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+/* ========================
+   "Our Clients" Section Only
+======================== */
+.clients-section {
+  padding: 20px 0; /* reduced padding */
+  text-align: center;
+height:300px;
+}
+
+.clients-section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.clients-section .green-text {
+  color: green;
+}
+
+.clients-section .blue-text {
+  color: #1e2a8a;
+}
+
+/* Container fixed width */
+.clients-section .clients-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Swiper slide style */
+.clients-section .clients-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    box-sizing: border-box; /* ensures padding doesn't affect width */
+    height: 100px; /* full height of the section */
+  
+}
+
+/* Logo style */
+.clients-section .clients-slider .swiper-slide img {
+  width: 250px;
+  height: 120px;
+  border: 1px solid #ddd;
+  background: white;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: block; /* removes default image inline gap */
+}
+
+</style>
+
+<section class="clients-section">
+  <div class="clients-container">
+    <h1 class="" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:500;margin-bottom: 50px;">
+      Our <span style="color:green">Client</span>
+    </h1>
+
+    <!-- Swiper -->
+    <div class="swiper clients-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="data:image/png;base64,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" alt="Motherson" />
+        </div>
+        <div class="swiper-slide">
+          <img src="data:image/png;base64,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" alt="Honda" />
+        </div>
+        <div class="swiper-slide">
+          <img src="data:image/png;base64,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" alt="JBM Group" />
+        </div>
+        <div class="swiper-slide">
+          <img src="data:image/png;base64,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" alt="BHEL" />
+        </div>
+        <div class="swiper-slide">
+          <img src="data:image/png;base64,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" alt="Extra Client" />
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+    
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper('.clients-slider', {
+  loop: true,
+  slidesPerView: 5, // adjust for desktop
+  spaceBetween: 5, // your required gap
+  autoplay: {
+    delay: 2000, // time between slides in ms
+    disableOnInteraction: false, // keep autoplay after manual interaction
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1, // small screens
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+</script>
+
 
 
 {{-- new letter --}}
@@ -572,7 +1060,7 @@
         }
 
         .newsletter-title {
-            font-weight: 600;
+            font-weight: 500;
             color: #2c3e50;
             animation-delay: 0.2s;
         }
@@ -616,8 +1104,8 @@
         }
 
         .newsletter-icon {
-            font-size: 2.5rem;
-            color: #007bff;
+            font-size: 1.6rem;
+            color: #ff6b35;
             margin-bottom: 1rem;
             animation: bounce 2s infinite;
         }
@@ -676,7 +1164,7 @@
         }
     </style>
 
-    <section class="newsletter-section py-5">
+    <section class="newsletter-section py-2">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
 
@@ -686,41 +1174,27 @@
                     <div class="newsletter-icon fade-in-up">
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
-                    <h3 class="newsletter-title mb-3 fade-in-up">Subscribe to Our Newsletter</h3>
+                    <h5 class="newsletter-title  fade-in-up">Subscribe to Our Newsletter</h5>
                     <p class="newsletter-subtitle mb-4 text-muted fade-in-up">Stay updated with our latest news and updates.</p>
 
-                    <form class="newsletter-form row g-3 justify-content-center fade-in-up" id="newsletterForm">
-                        <div class="col-md-8">
-                            <input type="email" class="form-control" placeholder="Enter your email" required id="emailInput">
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-subscribe w-100">
-                                <i class="fas fa-paper-plane me-2"></i>Subscribe
-                            </button>
-                        </div>
-                    </form>
+                     <form class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-2" id="simpleNewsletterForm" autocomplete="off">
+  <input type="email" class="form-control form-control-sm w-100 w-md-auto" placeholder="Your email" id="simpleEmail" required style="max-width:250px;border: 1px solid black;">
 
-                    <!-- Captcha Section -->
-                    <div class="captcha-section mt-4 fade-in-up" style="animation-delay: 1s;">
-                        <div class="row g-2 justify-content-center align-items-end">
-                            <div class="col-md-4">
-                                <label for="captcha" class="form-label text-start d-block">Enter Captcha</label>
-                                <input type="text" class="form-control" id="captcha" name="captcha"
-                                       placeholder="Enter captcha code" required>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="captcha-display bg-light  p-1 text-center">
-                                    <span id="captcha-code" class="fw-bold fs-4 text-primary font-monospace">A3B7K</span>
-                                </div>
-                            </div>
-                            <div class="col-md-1">
-                                <button type="button" class="btn btn-outline-primary captcha-refresh-btn" onclick="refreshCaptcha()" title="Refresh Captcha">
-                                    <i class="fas fa-sync-alt"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+  <!-- CAPTCHA canvas -->
+  <canvas id="simpleCaptcha" width="100" height="34" style="border-radius:5px; background:#f8f9fa;"></canvas>
 
+  <!-- Refresh button -->
+  <button type="button" class="btn btn-outline-secondary btn-sm px-2" style="border: 1px solid black;" onclick="drawSimpleCaptcha()" title="Refresh Captcha">
+    <i class="fas fa-sync-alt"></i>
+  </button>
+
+  <!-- CAPTCHA input -->
+  <input type="text" class="form-control form-control-sm" placeholder="Enter code" id="simpleCaptchaInput" required style="max-width:120px;border: 1px solid black;">
+  
+  <!-- Subscribe -->
+<button class="btn btn-sm subscribe-btn" style="background-color: #ff6b35; color: white; padding:10px 0px; font-size:15px;border-radius:5px;text-align:justify;width:113px" type="submit">
+    <i class="fas fa-paper-plane me-1"></i>Subscribe
+</button></form>
                     <small class="privacy-text text-muted mt-3 d-block fade-in-up">
                         <i class="fas fa-shield-alt me-1"></i>
                         We respect your privacy. Unsubscribe at any time.
@@ -995,6 +1469,8 @@
     line-height: 20px;
 }
     </style>
+
+    
 @section('script')
     <script>
         let site_url = '{{ url('/') }}';

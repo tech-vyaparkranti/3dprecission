@@ -9,8 +9,8 @@
 <div id="about">
     <div class="default-content products-page pt-5 pb-3">
         <div class="custom-container">
-            <div class="site-title pb-3">
-                <h2 class="text-center">Our Services</h2>
+            <div class=" pb-3">
+                <h1 class="text-center" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:500">Our <span style="color:green">Services</span></h1>
                 {{-- <p class="text-center pb-3">From basic treks to high-altitude mountaineering expeditions, we cater to adventurers of all levels.</p> --}}
             </div>
             <div class="midd-content">
