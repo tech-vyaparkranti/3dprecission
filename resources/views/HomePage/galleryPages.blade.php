@@ -9,8 +9,8 @@
 <div id="about">
     <div class="default-content pt-5 pb-5">
         <div class="custom-container">
-            <div class="site-title mb-4">
-                <h2 class="text-center">Glimpse of Happiness</h2>
+            <div class=" mb-4">
+                <h1 class="text-center" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:600">Gallery</h1>
             </div>
             {{-- <div class="shuffle_wrapper text-center pt-2 pb-4">
                 <button class="default-btn" id='all'><span>All</span></button>

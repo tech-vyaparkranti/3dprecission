@@ -93,9 +93,9 @@ a {
 }
 
 .footer-logo img {
-    max-width: 118px;
-    height: 100%;
-    border-radius: 50%;
+    width: 190px;
+    height: 90px;
+
     margin-left: 10px;
 }
 
@@ -339,7 +339,7 @@ a {
 
 .header-contaner ul li:hover a,
 .header-contaner ul li:focus a {
-    color: var(--lightblue-color);
+    color: #ff6b35;
 }
 
 .header-contaner ul li {
@@ -927,12 +927,12 @@ section.chairperson {
 /* footer section */
 .footer-section {
     border-top: 1px solid lightgray;
-    background-color: #fff6f4;
+    background-color: black;
 }
 
 .copyright-section {
-    background-color: #58424d75;
-    color: rgb(var(--black-color));
+    background-color: #4a4a4a;
+    color: white
 }
 
 .footer-logo>p {
@@ -940,6 +940,7 @@ section.chairperson {
     line-height: 24px;
     margin-top: 1rem;
     margin-left: 14px;
+    color: white;
     max-width: calc(100% - 20px);
 }
 
@@ -948,6 +949,7 @@ section.chairperson {
     padding: 0 0;
     margin-left: -11px;
     list-style: none;
+
 }
 
 .footer-item {
@@ -955,11 +957,13 @@ section.chairperson {
 }
 
 .footer-item h5.footer-title {
-    color: var(--brown-color);
+    color: #ff6b35;
     margin-left: -12px;
     text-transform: capitalize;
     font: 700 18px/normal var(--font-Outfit);
     text-shadow: var(--text-shadow) rgb(var(--dgreen-color) / 20%);
+
+
 }
 
 .footer-contact .footer-item p {
@@ -969,13 +973,14 @@ section.chairperson {
 .footer-contact .footer-item label {
     font: 700 14px/normal var(--font-poppins);
     margin-bottom: 5px;
+    color: white
 }
 
 .footer-contact .footer-item a,
 .footer-contact .footer-item p,
 .footer-item a {
     font: 400 14px/normal var(--font-josefin);
-    color: #444 !important;
+    color: white !important;
 }
 
 /* Social  */
@@ -986,7 +991,7 @@ section.chairperson {
 .social-media:not(.slide-navigation .social-media)>li>a {
     color: #fff !important;
     height: 40px;
-    background-color: var(--brown-color) !important;
+    background-color: #ff6b35 !important;
     width: 40px;
     line-height: 45px;
     text-align: center;
@@ -997,9 +1002,10 @@ section.chairperson {
 }
 
 .common-home .social-media:not(.slide-navigation .social-media)>li>a {
-    color: #fff !important;
     height: 40px;
-    background-color: var(--brown-color) !important;
+    background-color: #ff6b35;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
     width: 40px;
     line-height: 45px;
     text-align: center;
@@ -1698,7 +1704,7 @@ section.chairperson {
 
     body.open-menu .header-contaner ul li:hover a,
     body.open-menu .header-contaner ul li:focus a {
-        color: #fff;
+        color: black;
     }
 
     body.open-menu .slide-navigation {
