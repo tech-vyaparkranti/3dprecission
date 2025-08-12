@@ -339,7 +339,7 @@ a {
 
 .header-contaner ul li:hover a,
 .header-contaner ul li:focus a {
-    color: #ff6b35;
+    /*color: #ff6b35; */
 }
 
 .header-contaner ul li {
@@ -1691,7 +1691,8 @@ section.chairperson {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgb(var(--yellow-color) / 30%);
+        /* background: rgb(var(--yellow-color) / 30%); */
+        background: #f2f2f2;
         width: 100%;
         height: auto;
         margin: 0 0;
