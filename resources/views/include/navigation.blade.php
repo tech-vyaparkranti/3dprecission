@@ -23,10 +23,23 @@
     <li>
         <a href="{{ route('aboutUs') }}" class="{{ request()->is('about-us') ? 'active' : '' }}">About Us</a>
     </li>
-    <li>
-        <a href="{{ route('productPage') }}" class="{{ request()->is('services') ? 'active' : '' }}">Our Services</a>
-    </li>
-    <li>
+   <li class="dropdown">
+    <a href="#" class="{{ request()->is('services') ? 'active' : '' }}">
+        Our Services <i class="fa fa-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu">
+        <li style="width:100%;margin:0px;"><a href="{{ route('productPage') }}">3D Scanning</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">Reverse Engineering</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">2D Drawing Generation</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">3D Printing/Rapid Prototyping</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">CMM Inspection</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">Laser Scanning</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">Surface Deviation Analysis</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">Spare Part Design Development</a></li>
+        <li style="width:100%;margin:0px;"><a href="#">Laser Tracker Service</a></li>
+    </ul>
+</li>
+ <li>
         <a href="{{ route('contactUs') }}" class="{{ request()->is('contact-us') ? 'active' : '' }}">Contact Us</a>
     </li>
     <li>
@@ -44,6 +57,82 @@
     </div>
 </header>
 <Style>
+
+
+
+/* Parent menu item */
+.dropdown-menu li {
+    position: relative;
+    padding:0px !important;
+   
+}
+
+/* Dropdown menu container */
+.navbar-block .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 270px;
+    list-style: none;
+    z-index: 100;
+     padding:0px !important;
+    border:none !important;
+    padding-top:15px !important; 
+    
+}
+
+/* Dropdown menu links */
+.navbar-block .dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    color: 666;
+    font-family:'Gill Sans MT';
+    font-weight:normal;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color:black;
+   
+
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateX(0); /* slide into place */
+    pointer-events: auto;
+}
+
+.navbar-block .dropdown-menu li a:hover {
+    background: orange;
+
+}
+
+/* Show on hover */
+.navbar-block li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* Navbar container */
 .navbar {
   background: #fff;

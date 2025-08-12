@@ -476,51 +476,51 @@ Our team is committed to precision at every stage — from capturing the smalles
   
   <div class="industries-grid">
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
       <p>Telecom</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
-      <p>Aerospace</p>
+       <img class="icon-bounce" src="./assets/img/airplane.png"/>
+     <p>Aerospace</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/factory.png"/>
       <p>Automobile</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/worker (1).png"/>
       <p>Construction</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
-      <p>Manufacturing</p>
+       <img class="icon-bounce" src="./assets/img/electric-factory.png"/>
+     <p>Manufacturing</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
-      <p>Oil and Gas</p>
+     <img class="icon-bounce" src="./assets/img/oil-pump.png"/>
+       <p>Oil and Gas</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/truck.png"/>
       <p>Logistics</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
       <p>Print</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
-      <p>Power</p>
+     <img class="icon-bounce" src="./assets/img/electric-vehicle.png"/>
+       <p>Power</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
-      <p>Marine</p>
+     <img class="icon-bounce" src="./assets/img/cruise-ship.png"/>
+       <p>Marine</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
       <p>Steel</p>
     </div>
     <div class="industry-item">
-      <i class="bi bi-arrow-down-circle-fill icon-bounce" style="font-size: 3rem; color: red;"></i>
+      <img class="icon-bounce" src="./assets/img/laboratory.png"/>
       <p>Chemical</p>
     </div>
   </div>
