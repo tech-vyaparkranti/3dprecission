@@ -1,3 +1,8 @@
+@php
+    use App\Models\ServicesModel;
+    $services = ServicesModel::all();
+@endphp
+
 <div class="sticky-navigation">
     <div class="custom-container">
     <ul class="sticky-content p-0 m-0">
@@ -23,21 +28,19 @@
     <li>
         <a href="{{ route('aboutUs') }}" class="{{ request()->is('about-us') ? 'active' : '' }}">About Us</a>
     </li>
-   <li class="dropdown">
-    <a href="#" class="{{ request()->is('services') ? 'active' : '' }}">
-        Our Services <i class="fa fa-angle-down"></i>
+  <li class="dropdown">
+    <a href="#">
+        Our Services
     </a>
-    <ul class="dropdown-menu">
-        <li style="width:100%;margin:0px;"><a href="{{ route('productPage') }}">3D Scanning</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">Reverse Engineering</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">2D Drawing Generation</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">3D Printing/Rapid Prototyping</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">CMM Inspection</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">Laser Scanning</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">Surface Deviation Analysis</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">Spare Part Design Development</a></li>
-        <li style="width:100%;margin:0px;"><a href="#">Laser Tracker Service</a></li>
-    </ul>
+   <ul class="dropdown-menu">
+    @foreach($services as $service)
+        <li style="width:100%; margin:0px;">
+            <a href="{{ url('service/' . $service->slug) }}">
+                {{ $service->heading_top }}
+            </a>
+        </li>
+    @endforeach
+</ul>
 </li>
  <li>
         <a href="{{ route('contactUs') }}" class="{{ request()->is('contact-us') ? 'active' : '' }}">Contact Us</a>
