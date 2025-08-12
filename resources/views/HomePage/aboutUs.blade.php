@@ -1,6 +1,7 @@
 @extends('layouts.webSite')
 @section('title', 'About Us')
 @section('content')
+
 <div class="information-page-slider">
     <div class="information-content">
         <h1><a href="{{ url('/') }}">Home</a><span>About Us</span></h1>

@@ -30,7 +30,7 @@
         <a href="{{ route('contactUs') }}" class="{{ request()->is('contact-us') ? 'active' : '' }}">Contact Us</a>
     </li>
     <li>
-        <a href="{{ route('galleryPages') }}" class="{{ request()->is('event') ? 'active' : '' }}">Gallery</a>
+        <a href="{{ route('galleryPages') }}" class="{{ request()->is('') ? 'active' : '' }}">Gallery</a>
     </li>
 </ul>
 </div>
@@ -45,28 +45,12 @@
 </header>
 <Style>
     /* Navbar container */
-
+.navbar {
+  background: #fff;
+  padding: 10px 0;
+}
 
 /* Remove default UL styles */
-.navbar-block {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Link styles */
-.navbar-block li a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 5px 0;
-}
 
 /* Orange text on hover */
 .navbar-block li a:hover {

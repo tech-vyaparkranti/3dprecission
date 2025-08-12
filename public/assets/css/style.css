@@ -957,13 +957,13 @@ section.chairperson {
 }
 
 .footer-item h5.footer-title {
-    color: white;
+    color: #ff6b35;
     margin-left: -12px;
     text-transform: capitalize;
     font: 700 18px/normal var(--font-Outfit);
     text-shadow: var(--text-shadow) rgb(var(--dgreen-color) / 20%);
-    border-bottom: 2px solid white;
-    width: 250px;
+
+
 }
 
 .footer-contact .footer-item p {
@@ -1704,7 +1704,7 @@ section.chairperson {
 
     body.open-menu .header-contaner ul li:hover a,
     body.open-menu .header-contaner ul li:focus a {
-        color: #fff;
+        color: black;
     }
 
     body.open-menu .slide-navigation {

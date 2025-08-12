@@ -174,9 +174,12 @@
             </div>
         </div>
 
-        <div class="col-12 mt-3">
-            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
-        </div>
+     <div class="col-12 mt-3">
+  <button type="submit" class="btn w-100" style="background:#ff6b35; color:white;" id="submitButton">
+    Submit
+  </button>
+</div>
+
     </div>
 </form>
 
