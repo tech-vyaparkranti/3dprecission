@@ -74,7 +74,7 @@
     top: 100%;
     left: 0;
     background: white;
-    min-width: 270px;
+    min-width: 280px;
     list-style: none;
     z-index: 100;
      padding:0px !important;
@@ -105,6 +105,7 @@
 
 .navbar-block .dropdown-menu li a:hover {
     background: orange;
+    color:white;
 
 }
 

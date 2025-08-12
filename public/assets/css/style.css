@@ -737,10 +737,10 @@ section.chairperson {
 .products-page .destinations-figure>img,
 .service-page .destinations-figure>img,
 .we-offer .destinations-figure>img {
-    min-height: 400px;
-    width: 400px;
+    height: 300px;
+    /* width: 400px;
     object-fit: cover;
-    object-position: center;
+    object-position: center; */
 }
 
 .glimpse .destinations-figure>img {
