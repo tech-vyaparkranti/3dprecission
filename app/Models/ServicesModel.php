@@ -2,29 +2,41 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ServicesModel extends Model
 {
-    use HasFactory;
+    protected $table = 'services';
 
-    protected $table = "services";
+    protected $fillable = [
+        'banner_image',
+        'gallery_images',
+        'heading_top',
+        'slug',
+        'heading_middle',
+        'long_description',
+        'seo_title',
+        'seo_description',
+        'seo_keywords',
+        'slide_status',
+        'slide_sorting',
+    ];
 
-    const ID = "id";
-    const IMAGE = "image";
-    const HEADING_TOP = "heading_top";
-    const HEADING_MIDDLE = "heading_middle";
-    const HEADING_BOTTOM = "heading_bottom";
-    const SLIDE_STATUS = "slide_status";
-    const SLIDE_SORTING = "slide_sorting";
-    const STATUS = "status";
-    const CREATED_BY = "created_by";
-    const UPDATED_BY = "updated_by";
-    const CREATED_AT = "created_at";
-    const UPDATED_AT = "updated_at";
+    protected $casts = [
+        'gallery_images' => 'array',  // automatically cast JSON to array
+    ];
 
-    const SLIDE_STATUS_LIVE = "live";
-    const SLIDE_STATUS_DISABLED = "disabled";
-    #"live","disabled"
+    // Define constants for the field names (optional, as seen in your DataTable)
+    const ID = 'id';
+    const BANNER_IMAGE = 'banner_image';
+    const GALLERY_IMAGES = 'gallery_images';
+    const HEADING_TOP = 'heading_top';
+    const SLUG = 'slug';
+    const HEADING_MIDDLE = 'heading_middle';
+    const LONG_DESCRIPTION = 'long_description';
+    const SEO_TITLE = 'seo_title';
+    const SEO_DESCRIPTION = 'seo_description';
+    const SEO_KEYWORDS = 'seo_keywords';
+    const SLIDE_STATUS = 'slide_status';
+    const SLIDE_SORTING = 'slide_sorting';
 }
