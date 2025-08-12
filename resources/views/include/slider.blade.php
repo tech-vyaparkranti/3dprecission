@@ -24,10 +24,10 @@
         @unless (count($sliders) > 0)
         <!-- Static slides - example content added for structure, currently commented out -->
         <div class="swiper-slide" style="">
-          <img class="img-fluid" width="" height="" alt="Image" src="./assets/img/Banner Pic 1.jpg" />
+          <img class="img-fluid" width="" height="" alt="Image" src="./assets/img/banner_new1.jpg" />
           <div class="video-content">
             
-            <h2>Adiyogi Global</h2>
+            <h2>3d Precission</h2>
             <!-- <h3>Grow with Innovation: Solutions for Sustainable Farming</h3>
             <p>A short descriptive text for Banner Pic 1.</p>
             <a href="{{ route('contactUs') }}" aria-label="Explore The World">Get in touch</a> -->
@@ -35,17 +35,17 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <img class="img-fluid" width="" height="" alt="Image" src="./assets/img/Banner Pic 2.jpg" />
+          <img class="img-fluid" width="" height="" alt="Image" src="./assets/img/banner_new2.webp" />
           <div class="video-content">
             
-            <h2>Adiyogi Global</h2>
+            <h2>3d Precission</h2>
             <!-- <h3>Grow with Innovation: Solutions for Sustainable Farming</h3>
             <p>A short descriptive text for Banner Pic 2.</p>
             <a href="{{ route('contactUs') }}" aria-label="Explore The World">Get in touch</a> -->
             
           </div>
         </div>
-         <div class="swiper-slide">
+         {{-- <div class="swiper-slide">
           <img class="img-fluid" width="" height="" alt="Image" src="./assets/img/ab.jpg" />
           <div class="video-content">
             
@@ -55,7 +55,7 @@
             <a href="{{ route('contactUs') }}" aria-label="Explore The World">Get in touch</a> -->
             
           </div>
-        </div>
+        </div> --}}
        
          @endunless
       </div>

@@ -7,6 +7,8 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\HomeProductsController;
 use App\Http\Controllers\WebSiteElementsController;
+use App\Http\Controllers\TestimonialController;
+
 
 
 Route::get("login",[AdminController::class,"Login"])->name("login");
@@ -47,6 +49,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post("home-products-data", [HomeProductsController::class, "homeDestinationsData"])->name("homeDestinationsData");
 
     Route::post("manage-contact-data", [ServicesController::class, "managecontactdata"])->name("managecontactdata");
+
+    Route::get("manage-testimonials",[TestimonialController::class,"managetestimonials"])->name("managetestimonials");
+    Route::post("addtestimonialsItems",[TestimonialController::class,"addTestimonial"])->name("addTestimonial");
+    Route::post("addGalleryDataTable",[TestimonialController::class,"testimonialsDataTable"])->name("testimonialsDataTable");
 
     Route::get("contact-us-data", function () {
     return view("HomePage.ContactUsdata");

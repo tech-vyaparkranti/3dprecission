@@ -18,15 +18,9 @@
                     <div class="offerings-content">
                         <p class="text-justify">
                             {!! $home_about_content ?? 
-                            'Adiyogi Global is dedicated to providing healthy, high-quality products to customers worldwide. With
-                            over 12 years of experience, we source the finest goods directly from top farmers and manufacturers
-                            across India. Our commitment to quality and transparency ensures that every product meets the highest
-                            standards of purity and freshness. We take pride in earning the trust of our customers through
-                            exceptional service and a deep dedication to their well-being. At Adiyogi Global, we bring the best of
-                            India to the world, always prioritizing quality and care. Customer trust is the foundation of Adiyogi
-                            Global. We are committed to earning and maintaining this trust through transparency, integrity, and
-                            exceptional service. From your first interaction with us, we aim to provide a seamless and satisfying
-                            experience.' 
+                            '3D Precision is dedicated to delivering cutting-edge 3D scanning, measurement, and engineering solutions to clients worldwide. With over 12 years of industry expertise, we work with the latest technologies to provide accurate, reliable, and high-quality results for industries ranging from automotive and aerospace to manufacturing and product design.
+
+Our team is committed to precision at every stage — from capturing the smallest details to delivering complete, ready-to-use digital models. By combining technical excellence with transparency and customer-focused service, we ensure that every project meets the highest standards of accuracy and quality.' 
                             !!}
                         </p>
                         <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">Read More</button>
@@ -36,7 +30,7 @@
                 <!-- Image -->
 <div class="col-lg-5 col-md-12 text-center" data-aos="fade-right">
     <div class="offerings-figure pro-3d-effect" style="">
-        <img src="{{ asset($home_about_image ?? './assets/img/Random Pics.jpeg') }}" 
+        <img src="{{ asset($home_about_image ?? './assets/img/about.jpg') }}" 
              class="img-fluid rounded shadow" 
              alt="Bikaner">
     </div>
@@ -174,17 +168,17 @@
 
 </style>
 
-<div class="card-container" >
+<div class="card-container">
   <!-- Card 1 -->
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-     <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>  
-      <h3 style="font-size:17px;font-weight:bold">Seamlessly integrated feature</h3>
-        <p>Supports the team members and focuses on giving quality services...</p>
+        <img src="assets/icons/High-Resolution.png" alt="High-Resolution 3D Digitizing" style="width:160px;height:160px;">
+        <h3 style="font-size:17px;font-weight:bold">High-Resolution 3D Digitizing</h3>
+        <p>Capture every minute detail with precision scanning technology...</p>
       </div>
       <div class="card-back">
-        <p>This feature ensures teamwork efficiency, streamlined communication, and productivity.</p>
+        <p>Our advanced 3D digitizing ensures unmatched clarity and accuracy for your components.</p>
       </div>
     </div>
   </div>
@@ -193,12 +187,12 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-       <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
-      <h3 style="font-size:17px;font-weight:bold">Advanced Analytics</h3>
-        <p>Provides in-depth reports to track performance and growth...</p>
+        <img src="assets/icons/reverse_engineering.png" alt="Reverse Engineering" style="width:160px;height:160px;">
+        <h3 style="font-size:17px;font-weight:bold">Reverse Engineering Solutions</h3>
+        <p>Recreate parts and components from existing physical samples...</p>
       </div>
       <div class="card-back">
-        <p>Analyze trends, measure KPIs, and optimize your strategy for success.</p>
+        <p>We transform your physical objects into precise CAD models for redesign and improvement.</p>
       </div>
     </div>
   </div>
@@ -207,12 +201,12 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-     <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
-             <h3 style="font-size:17px;font-weight:bold">Cloud Integration</h3>
-        <p>Access your data securely from anywhere in the world...</p>
+        <img src="assets/icons/dimensional_accuracy.png" alt="Dimensional Accuracy" style="width:160px;height:160px;">
+        <h3 style="font-size:17px;font-weight:bold">Dimensional Accuracy Verification</h3>
+        <p>Ensure every measurement meets exact engineering specifications...</p>
       </div>
       <div class="card-back">
-        <p>Seamless cloud sync keeps your projects and team updated in real-time.</p>
+        <p>Our accuracy checks guarantee your parts meet tolerance requirements flawlessly.</p>
       </div>
     </div>
   </div>
@@ -221,12 +215,12 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-   <i class="fa-solid fa-people-group" style="font-size:70px;color:#ff6b35"></i>
-        <h3 style="font-size:17px;font-weight:bold">Customer Support</h3>
-        <p>Round-the-clock assistance for all your needs...</p>
+        <img src="assets/icons/specialized_automation.png" alt="Automotive Scanning" style="width:160px;height:160px;">
+        <h3 style="font-size:17px;font-weight:bold">Specialized Automotive Component Scanning</h3>
+        <p>Detailed scanning for automotive parts and custom components...</p>
       </div>
       <div class="card-back">
-        <p>Our 24/7 support ensures your business runs without interruption.</p>
+        <p>We deliver precise digital models for automotive design, repair, and quality control.</p>
       </div>
     </div>
   </div>
@@ -281,30 +275,33 @@
     <div class="swiper we-offer">
       <div class="swiper-wrapper">
 
-        @if ($home_products->count())
-          @foreach ($home_products as $item)
+        @if ($services->count())
+          {{-- Dynamic Services --}}
+          @foreach ($services as $item)
             <div class="swiper-slide">
               <div class="destinations-block">
                 <div class="destinations-figure">
-                  <img src="{{ asset($item->image) }}" class="img-fluid" alt="Destinations" />
+                  <img src="{{ asset($item->banner_image) }}" class="img-fluid" alt="{{ $item->heading_top }}" />
                 </div>
-                <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">{{ $item->heading_top }}</span>
-
-                <!-- Hover overlay content -->
+                <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">
+                  {{ $item->heading_top }}
+                </span>
                 <div class="hover-overlay">
-                  More details about <br> {{ $item->heading_top }}
-                </div>
+    {!! implode('<br>', array_map(function($chunk) {
+        return implode(' ', $chunk);
+    }, array_chunk(explode(' ', e($item->heading_middle)), 3))) !!}
+</div>
               </div>
             </div>
           @endforeach
         @else
-          <!-- Example fallback slides with hover overlay -->
+          {{-- Static Fallback Services --}}
           <div class="swiper-slide">
             <div class="destinations-block">
               <div class="destinations-figure">
-                <img src="./assets/img/Basmati rice.jpeg" style="" class="img-fluid" alt="Destinations" />
+                <img src="./assets/img/Basmati rice.jpeg" class="img-fluid" alt="Basmati Rice" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Basmati Rice</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Basmati Rice</span>
               <div class="hover-overlay">
                 More details about <br> Basmati Rice
               </div>
@@ -313,9 +310,9 @@
           <div class="swiper-slide">
             <div class="destinations-block">
               <div class="destinations-figure">
-                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Destinations" />
+                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Ground Spices" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Ground Spices</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Ground Spices</span>
               <div class="hover-overlay">
                 More details about <br> Ground Spices
               </div>
@@ -324,25 +321,42 @@
           <div class="swiper-slide">
             <div class="destinations-block">
               <div class="destinations-figure">
-                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Destinations" />
+                <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Ground Spices" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35 ; margin:0px;padding:20px;color:white">Ground Spices</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Ground Spices</span>
               <div class="hover-overlay">
                 More details about <br> Ground Spices
               </div>
             </div>
           </div>
-          <!-- Add other fallback slides similarly -->
         @endif
 
       </div>
-
       <div class="swiper-pagination"></div>
     </div>
-
-  
   </div>
 </div>
+
+<style>
+  .hover-overlay {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;               /* Make it as wide as the card */
+    min-height: auto;          /* Allow height to grow */
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.4;
+    white-space: normal;       /* Allow wrapping */
+    word-wrap: break-word;     /* Break long words */
+    overflow: visible;         /* Show all text */
+    z-index: 2;
+}
+
+</style>
+
 <!-- Destinations Section End -->
 
 
@@ -517,7 +531,7 @@
   position: relative;
   text-align: center;
   padding: 50px 20px;
-  background: url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg') no-repeat center center;
+  background: url('./assets/img/banner_new2.webp') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   z-index: 1;
@@ -772,7 +786,7 @@
 
 
 <!-- Testimonial Section -->
-<section class="testimonial-section ">
+<section class="testimonial-section">
   <div class="container text-center">
     <h2 class="fw-bold" style="font-family: 'Playfair Display', serif; margin-bottom: 40px; color: #fff !important;">
       What People <span>Say About Us?</span>
@@ -781,30 +795,36 @@
     <!-- Swiper Container -->
     <div class="swiper testimonial-slider">
       <div class="swiper-wrapper">
-        <!-- Testimonial 1 -->
-        <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
-          <p class="testimonial-text">
-            “I got an exact solution for my CMM inspection report from here. I got an exact solution for my CMM inspection report from here. T I got an exact solution for my CMM inspection report from here. T I got an exact solution for my CMM inspection report from here. TThe employees are very good and supportive. They completed my work on time. Scanotech Informatics is the best scanning company I have ever seen.”
-          </p>
-        </div>
+        
+        @if($testimonials->count() > 0)
+          @foreach($testimonials as $testimonial)
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+              <p class="testimonial-text">
+                “{{ $testimonial->message }}”
+              </p>
+            </div>
+          @endforeach
+        @else
+          <!-- Fallback static testimonials -->
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <p class="testimonial-text">
+              “I got an exact solution for my CMM inspection report from here. The employees are very good and supportive. They completed my work on time. Scanotech Informatics is the best scanning company I have ever seen.”
+            </p>
+          </div>
 
-        <!-- Testimonial 2 -->
-        <div class="swiper-slide" style="  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;">
-          <p class="testimonial-text">
-            “Exceptional service and attention to detail. They really care about delivering top-quality results.”
-          </p>
-        </div>
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <p class="testimonial-text">
+              “Exceptional service and attention to detail. They really care about delivering top-quality results.”
+            </p>
+          </div>
 
-        <!-- Testimonial 3 -->
-        <div class="swiper-slide" style="  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;">
-          <p class="testimonial-text">
-            “Professional team and quick turnaround. I recommend them without hesitation.”
-          </p>
-        </div>
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <p class="testimonial-text">
+              “Professional team and quick turnaround. I recommend them without hesitation.”
+            </p>
+          </div>
+        @endif
+
       </div>
 
       <!-- Pagination -->
@@ -812,6 +832,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Swiper CSS -->
 

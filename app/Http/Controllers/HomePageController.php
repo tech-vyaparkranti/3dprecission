@@ -13,24 +13,45 @@ use App\Models\WebSiteElements;
 use App\Traits\CommonFunctions;
 use App\Models\HomeProductsModel;
 use Mews\Captcha\Facades\Captcha;
+use App\Models\Testimonial;
+
+
 
 class HomePageController extends Controller
 {
     use CommonFunctions;
 
-    public function homePage(){
-        try{
-            $sliders=SliderModel::where([[SliderModel::SLIDE_STATUS,SliderModel::SLIDE_STATUS_LIVE],
-            [SliderModel::SLIDE_STATUS,1]])->orderBy(SliderModel::SLIDE_SORTING,"desc")->get();
-            $home_products=HomeProductsModel::where('slide_status','live')->get();
-            $data = $this->getElement();
-            return view("HomePage.dynamicHomePage",compact('sliders','home_products'),$data);
-        }catch(Exception $exception){
-            echo $exception->getMessage();
-            return false;
-        }
+   public function homePage()
+{
+    try {
+        $sliders = SliderModel::where([
+            [SliderModel::SLIDE_STATUS, SliderModel::SLIDE_STATUS_LIVE],
+            [SliderModel::SLIDE_STATUS, 1]
+        ])->orderBy(SliderModel::SLIDE_SORTING, "desc")->get();
 
+        $home_products = HomeProductsModel::where('slide_status', 'live')->get();
+
+        $services = ServicesModel::where('slide_status', 'live')
+            ->orderBy('slide_sorting', 'desc')
+            ->get();
+
+        // ✅ Fetch active testimonials ordered by sorting
+        $testimonials = Testimonial::where('status', 1)
+            ->orderBy('sorting', 'asc')
+            ->get();
+
+        $data = $this->getElement();
+
+        return view(
+            "HomePage.dynamicHomePage",
+            compact('sliders', 'home_products', 'services', 'testimonials'),
+            $data
+        );
+    } catch (Exception $exception) {
+        echo $exception->getMessage();
+        return false;
     }
+}
     public function aboutUs(){
         $data = $this->getElement();
         return view("HomePage.aboutUs",$data);
