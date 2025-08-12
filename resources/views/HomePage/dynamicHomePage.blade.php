@@ -173,7 +173,7 @@ Our team is committed to precision at every stage — from capturing the smalles
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img src="assets/icons/High-Resolution.png" alt="High-Resolution 3D Digitizing" style="width:160px;height:160px;">
+        <img class="img1" src="assets/icons/High-Resolution.png" alt="High-Resolution 3D Digitizing" style="width:160px;height:160px;">
         <h3 style="font-size:17px;font-weight:bold">High-Resolution 3D Digitizing</h3>
         <p>Capture every minute detail with precision scanning technology...</p>
       </div>
@@ -187,7 +187,7 @@ Our team is committed to precision at every stage — from capturing the smalles
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img src="assets/icons/reverse_engineering.png" alt="Reverse Engineering" style="width:160px;height:160px;">
+        <img class="img1" src="assets/icons/reverse_engineering.png" alt="Reverse Engineering" style="width:160px;height:160px;">
         <h3 style="font-size:17px;font-weight:bold">Reverse Engineering Solutions</h3>
         <p>Recreate parts and components from existing physical samples...</p>
       </div>
@@ -201,7 +201,7 @@ Our team is committed to precision at every stage — from capturing the smalles
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img src="assets/icons/dimensional_accuracy.png" alt="Dimensional Accuracy" style="width:160px;height:160px;">
+        <img class="img1" src="assets/icons/dimensional_accuracy.png" alt="Dimensional Accuracy" style="width:160px;height:160px;">
         <h3 style="font-size:17px;font-weight:bold">Dimensional Accuracy Verification</h3>
         <p>Ensure every measurement meets exact engineering specifications...</p>
       </div>
@@ -215,7 +215,7 @@ Our team is committed to precision at every stage — from capturing the smalles
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <img src="assets/icons/specialized_automation.png" alt="Automotive Scanning" style="width:160px;height:160px;">
+        <img class="img1" src="assets/icons/specialized_automation.png" alt="Automotive Scanning" style="width:160px;height:160px;">
         <h3 style="font-size:17px;font-weight:bold">Specialized Automotive Component Scanning</h3>
         <p>Detailed scanning for automotive parts and custom components...</p>
       </div>
@@ -228,6 +228,13 @@ Our team is committed to precision at every stage — from capturing the smalles
 
    <!-- Destinations Section -->
 <style>
+  @media (max-width: 576px) {
+    /* Your CSS here */
+.img1{
+  width: 200px !important;
+  height: 100px !important;
+}
+}
 /* Swiper slide base */
 .swiper-slide .hover-overlay {
   position: absolute;
@@ -504,7 +511,7 @@ Our team is committed to precision at every stage — from capturing the smalles
       <p>Logistics</p>
     </div>
     <div class="industry-item">
-      <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
+      <img class="icon-bounce" src="./assets/img/3d-object (1).png"/>
       <p>Print</p>
     </div>
     <div class="industry-item">
@@ -516,7 +523,7 @@ Our team is committed to precision at every stage — from capturing the smalles
        <p>Marine</p>
     </div>
     <div class="industry-item">
-      <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
+      <img class="icon-bounce" src="./assets/img/welder.png"/>
       <p>Steel</p>
     </div>
     <div class="industry-item">
