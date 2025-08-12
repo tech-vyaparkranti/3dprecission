@@ -40,11 +40,15 @@ class HomePageController extends Controller
             ->orderBy('sorting', 'asc')
             ->get();
 
+        $clients = \App\Models\Client::where('status', 1)
+            ->orderBy('sorting', 'asc')
+            ->get();
+
         $data = $this->getElement();
 
         return view(
             "HomePage.dynamicHomePage",
-            compact('sliders', 'home_products', 'services', 'testimonials'),
+            compact('sliders', 'home_products', 'services', 'testimonials','clients'),
             $data
         );
     } catch (Exception $exception) {

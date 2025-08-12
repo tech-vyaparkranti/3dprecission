@@ -8,6 +8,8 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\HomeProductsController;
 use App\Http\Controllers\WebSiteElementsController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\ClientController;
+
 
 
 
@@ -53,6 +55,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get("manage-testimonials",[TestimonialController::class,"managetestimonials"])->name("managetestimonials");
     Route::post("addtestimonialsItems",[TestimonialController::class,"addTestimonial"])->name("addTestimonial");
     Route::post("addGalleryDataTable",[TestimonialController::class,"testimonialsDataTable"])->name("testimonialsDataTable");
+
+    Route::get('/manage-clients', [ClientController::class, 'manageClients'])->name('manageClients');
+Route::post('/clients-data', [ClientController::class, 'clientsDataTable'])->name('clientsDataTable');
+Route::post('/add-client', [ClientController::class, 'addClient'])->name('addClient');
 
     Route::get("contact-us-data", function () {
     return view("HomePage.ContactUsdata");
