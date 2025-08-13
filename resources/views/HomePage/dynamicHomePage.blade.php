@@ -168,7 +168,7 @@ Our team is committed to precision at every stage — from capturing the smalles
 
 </style>
 
-<div class="card-container">
+<div class="card-container"  data-aos="fade-up">
   <!-- Card 1 -->
   <div class="card">
     <div class="card-inner">
@@ -475,13 +475,13 @@ Our team is committed to precision at every stage — from capturing the smalles
 </div>
 </div>
  Why Choose Us Section Starts -->
-<section class="industries">
+<section class="industries"  >
   <!-- Black overlay -->
   <div class="bg-overlay"></div>
 
-  <h2 class="section-title">Industries We <span style="color:green">Serve</span></h2>
+  <h2 class="section-title">Industries We Serve</h2>
   
-  <div class="industries-grid">
+  <div class="industries-grid" data-aos="fade-up">
     <div class="industry-item">
       <img class="icon-bounce" src="./assets/img/telecommunicationss.png"/>
       <p>Telecom</p>
@@ -694,7 +694,7 @@ Our team is committed to precision at every stage — from capturing the smalles
 <!-- Why Choose Us Section Ends -->
 
 <section class="why-choose-us py-5">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
     <!-- Section Header -->
     <div class="text-center mb-5">
       <h2 class="fw-bold" style="font-family: 'Playfair Display', serif;color:#ff6b35">
@@ -793,8 +793,8 @@ Our team is committed to precision at every stage — from capturing the smalles
 
 
 <!-- Testimonial Section -->
-<section class="testimonial-section">
-  <div class="container text-center">
+<section class="testimonial-section" >
+  <div class="container text-center" data-aos="fade-up">
     <h2 class="fw-bold" style="font-family: 'Playfair Display', serif; margin-bottom: 40px; color: #fff !important;">
       What People <span>Say About Us?</span>
     </h2>
@@ -968,7 +968,7 @@ height:300px;
 </style>
 
 <section class="clients-section">
-  <div class="clients-container">
+  <div class="clients-container" data-aos="fade-up">
     <h1 class="" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:500;margin-bottom: 50px;">
       Our <span style="color:green">Client</span>
     </h1>
