@@ -983,19 +983,19 @@ height:300px;
                         <img src="{{ asset($client->image) }}"
      alt="Client Logo"
      class="img-fluid"
-     style="max-height: 80px;">
+     style="max-height: 100px;">
                     </div>
                 @endforeach
             @else
                 {{-- Fallback Static Logos --}}
                 <div class="col-6 col-md-3 col-lg-2 mb-4">
-                    <img src="{{ asset('images/default-client1.png') }}" class="img-fluid" style="max-height: 80px;">
+                    <img src="{{ asset('images/default-client1.png') }}" class="img-fluid" style="max-height: 100px;">
                 </div>
                 <div class="col-6 col-md-3 col-lg-2 mb-4">
-                    <img src="{{ asset('images/default-client2.png') }}" class="img-fluid" style="max-height: 80px;">
+                    <img src="{{ asset('images/default-client2.png') }}" class="img-fluid" style="max-height: 100px;">
                 </div>
                 <div class="col-6 col-md-3 col-lg-2 mb-4">
-                    <img src="{{ asset('images/default-client3.png') }}" class="img-fluid" style="max-height: 80px;">
+                    <img src="{{ asset('images/default-client3.png') }}" class="img-fluid" style="max-height: 100px;">
                 </div>
             @endif
         </div>
