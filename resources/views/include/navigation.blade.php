@@ -35,10 +35,10 @@
    <ul class="dropdown-menu">
     @foreach($services as $service)
         <li style="width:100%; margin:0px;">
-            <a href="{{ url('service/' . $service->slug) }}">
-                {{ $service->heading_top }}
-            </a>
-        </li>
+    <a href="{{ route('service.details', $service->slug) }}">
+        {{ $service->heading_top }}
+    </a>
+</li>
     @endforeach
 </ul>
 </li>

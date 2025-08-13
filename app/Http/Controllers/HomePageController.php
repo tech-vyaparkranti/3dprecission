@@ -80,11 +80,16 @@ class HomePageController extends Controller
         $data = $this->getElement();
         return view("HomePage.destinations",$data);
     }
-    public function productPage(){
-        $services=ServicesModel::where('slide_status','live')->get();
-        $data = $this->getElement();
-         return view("HomePage.productPage",compact('services'),$data);
-    }
+   public function productPage($slug)
+{
+    $service = ServicesModel::where('slug', $slug)
+                ->where('slide_status', 'live')
+                ->firstOrFail();
+
+    $data = $this->getElement(); // Your existing helper data
+
+    return view("HomePage.productPage", compact('service'), $data);
+}
     public function reportPage(){
         $data = $this->getElement();
          return view("HomePage.reportPage",$data);
