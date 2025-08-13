@@ -85,10 +85,11 @@ class HomePageController extends Controller
     $service = ServicesModel::where('slug', $slug)
                 ->where('slide_status', 'live')
                 ->firstOrFail();
+    $allServices = ServicesModel::where('slide_status', 'live')->get();
 
     $data = $this->getElement(); // Your existing helper data
 
-    return view("HomePage.productPage", compact('service'), $data);
+    return view("HomePage.productPage", compact('service','allServices'), $data);
 }
     public function reportPage(){
         $data = $this->getElement();
