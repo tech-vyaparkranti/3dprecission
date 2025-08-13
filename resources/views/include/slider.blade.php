@@ -4,7 +4,7 @@
     <div class="swiper main-slider">
       <div class="swiper-wrapper">
         @foreach ($sliders as $slide )
-        <div class="swiper-slide swiper-slides">
+        <div class="swiper-slide">
           <img class="img-fluid" width="" height="" alt="Image" src="{{ asset($slide->image) }}" />
           <div class="video-content">
             <!-- Dynamic content from the database -->
@@ -66,6 +66,27 @@
 
 </div>
 <style>
+  .swiper-slide-active .video-content h2 {
+  animation: fadeUp 0.8s ease forwards;
+}
+.swiper-slide-active .video-content h3 {
+  animation: fadeUp 0.8s ease 0.3s forwards;
+}
+.swiper-slide-active .video-content p {
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Common arrow button style */
 .swiper-button-prev,
 .swiper-button-next {
@@ -120,17 +141,20 @@
   border-radius: 50%;
   color:black;
 }
-.a.swiper-slide::after {
+.video-block.a .swiper-slide {
+  position: relative; /* Needed for ::after to be positioned relative to slide */
+}
+
+.video-block.a .swiper-slide::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Black with 50% opacity */
-  z-index: 1; /* Puts overlay above the image */
-}
-/* Default style for desktop and large screens */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Places overlay above image */
+}/* Default style for desktop and large screens */
 
 /* Extra large devices (large desktops) */
 
