@@ -71,6 +71,180 @@
         </div>
     </div>
 </div>
+<style>
+/* Gallery container */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay on hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  color:white;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Search icon */
+.overlay i {
+  color: #ccc; /* default color */
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.overlay i:hover {
+  color: white;
+}
+
+/* Popup overlay */
+.image-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+
+/* Popup content */
+.popup-content {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+}
+
+.popup-content img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .popup-content img{
+    max-width:100%;
+    max-height:auto;
+  }
+  .popup-content {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+</style>
+
+
+<div class="container py-5 gallery-container">
+  <div class="row">
+    <div class="col-6 col-md-3 gallery">
+      <div class="gallery-item">
+        <img src="https://damassets.autodesk.net/content/dam/autodesk/draftr/28447/3d-modelling-works-thumb-1172x660.jpg" alt="">
+        <div class="overlay" onclick="showPopup(this.previousElementSibling.src)">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 gallery">
+      <div class="gallery-item">
+        <img src="https://damassets.autodesk.net/content/dam/autodesk/images/solutions/3d-design-software/3d-cad-software-thumb-600x300.png" alt="">
+        <div class="overlay" onclick="showPopup(this.previousElementSibling.src)">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 gallery">
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTDWWQ_7p6TUW983Jp3-C-WS39NzUqa9aoFQ&s" alt="">
+        <div class="overlay" onclick="showPopup(this.previousElementSibling.src)">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 gallery">
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTG6rjSwa1LWuvRX_tEhjMIqncTX0Z-MvSZQ&s" alt="">
+        <div class="overlay" onclick="showPopup(this.previousElementSibling.src)">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="image-popup" id="imagePopup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <img id="popupImage" src="" alt="Full Image">
+  </div>
+</div>
+
+<script>
+function showPopup(imageSrc) {
+  document.getElementById('popupImage').src = imageSrc;
+  document.getElementById('imagePopup').style.display = 'flex';
+  history.pushState(null, '', '/services');
+}
+
+function closePopup() {
+  document.getElementById('imagePopup').style.display = 'none';
+  history.pushState(null, '', '/services');
+}
+</script>
+
+<style>
 
 {{-- ===== CSS ===== --}}
 <style>
