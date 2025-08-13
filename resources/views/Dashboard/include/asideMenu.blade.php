@@ -114,6 +114,13 @@
                   <div data-i18n="Analytics">Manage Testimonials</div>
                 </a>
               </li>
+
+               <li class="menu-item">
+                <a href="{{route("manageClients")}}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-bulb"></i>
+                  <div data-i18n="Analytics">Manage Clients</div>
+                </a>
+              </li>
               <li class="menu-item">
                 <a href="{{route("homeDestinationsSlider")}}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-bulb"></i>

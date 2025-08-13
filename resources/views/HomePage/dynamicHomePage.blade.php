@@ -968,7 +968,7 @@ height:300px;
 </style>
 
 <section class="clients-section">
-  <div class="clients-container" data-aos="fade-up">
+  <div class="clients-container">
     <h1 class="" style="color: #ff6b35;font-family:'Playfair Display', serif;font-weight:500;margin-bottom: 50px;">
       Our <span style="color:green">Client</span>
     </h1>
@@ -1003,6 +1003,7 @@ height:300px;
     </div>
   </div>
 </section>
+
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1233,125 +1234,66 @@ var swiper = new Swiper('.clients-slider', {
     </section>
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> --}}
-    <script>
-        // Captcha functionality
-        function refreshCaptcha() {
-            const captchaCode = document.getElementById('captcha-code');
-           const refreshBtn = document.querySelector('.captcha-refresh-btn');
+   <script>
+let simpleCaptchaCode = '';
 
-            // Add spinning animation
-            refreshBtn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i>';
+function drawSimpleCaptcha() {
+    const canvas = document.getElementById('simpleCaptcha');
+    const ctx = canvas.getContext('2d');
 
-            setTimeout(() => {
-                // Generate new captcha code
-                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                let newCode = '';
-                for (let i = 0; i < 5; i++) {
-                    newCode += characters.charAt(Math.floor(Math.random() * characters.length));
-                }
-                captchaCode.textContent = newCode;
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                // Clear captcha input
-                document.getElementById('captcha').value = '';
+    // Background
+    ctx.fillStyle = '#f1f1f1';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                // Reset button
-                refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
+    // Generate code
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    simpleCaptchaCode = '';
+    for (let i = 0; i < 5; i++) {
+        simpleCaptchaCode += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
-                // Add flash effect
-                captchaCode.parentElement.style.background = '#e3f2fd';
-                setTimeout(() => {
-                    captchaCode.parentElement.style.background = '#f8f9fa';
-                }, 300);
-            }, 500);
-        }
+    // Draw text
+    ctx.font = '20px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'center';
+    ctx.fillText(simpleCaptchaCode, canvas.width / 2, canvas.height / 2);
 
-        // Form submission animation
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+    // Optional: noise lines
+    for (let i = 0; i < 3; i++) {
+        ctx.strokeStyle = '#ccc';
+        ctx.beginPath();
+        ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.stroke();
+    }
+}
 
-            const email = document.getElementById('emailInput').value;
-            const captcha = document.getElementById('captcha').value;
-            const expectedCaptcha = document.getElementById('captcha-code').textContent;
-            const button = this.querySelector('.btn-subscribe');
-            const originalText = button.innerHTML;
+// Handle form submit
+document.getElementById('simpleNewsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-            // Validate captcha
-            if (captcha.toUpperCase() !== expectedCaptcha) {
-                // Captcha error animation
-                const captchaInput = document.getElementById('captcha');
-                captchaInput.style.borderColor = '#dc3545';
-                captchaInput.style.boxShadow = '0 0 10px rgba(220,53,69,0.3)';
-                captchaInput.focus();
+    const email = document.getElementById('simpleEmail').value.trim();
+    const captchaInput = document.getElementById('simpleCaptchaInput').value.trim();
 
-                setTimeout(() => {
-                    captchaInput.style.borderColor = '#e9ecef';
-                    captchaInput.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
-                }, 2000);
+    if (captchaInput.toUpperCase() !== simpleCaptchaCode) {
+        alert('Invalid captcha code.');
+        drawSimpleCaptcha();
+        return;
+    }
 
-                return;
-            }
+    alert('Subscribed successfully with ' + email);
+    this.reset();
+    drawSimpleCaptcha();
+});
 
-            // Loading animation
-            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
-            button.disabled = true;
+// Draw captcha on page load
+window.onload = drawSimpleCaptcha;
+</script>
 
-            setTimeout(() => {
-                // Success animation
-                button.innerHTML = '<i class="fas fa-check me-2"></i>Subscribed!';
-                button.classList.add('btn-success');
-                button.classList.remove('btn-subscribe');
-
-                // Add success shake animation
-                button.style.animation = 'pulse 0.5s ease-in-out';
-
-                // Reset form
-                document.getElementById('emailInput').value = '';
-                document.getElementById('captcha').value = '';
-                refreshCaptcha();
-
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                    button.classList.remove('btn-success');
-                    button.classList.add('btn-subscribe');
-                    button.style.animation = '';
-                }, 3000);
-
-            }, 1500);
-        });
-
-        // Add intersection observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-
-        // Add pulse animation keyframe
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes pulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.05); }
-                100% { transform: scale(1); }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
 
 {{-- new letter --}}
 
