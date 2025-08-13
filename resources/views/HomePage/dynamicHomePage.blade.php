@@ -286,6 +286,7 @@ Our team is committed to precision at every stage — from capturing the smalles
           {{-- Dynamic Services --}}
           @foreach ($services as $item)
             <div class="swiper-slide">
+              <a href="{{ route('service.details', $item->slug) }}" class="card-link" style="text-decoration:none; color:inherit;">
               <div class="destinations-block">
                 <div class="destinations-figure">
                   <img src="{{ asset($item->banner_image) }}" class="img-fluid" alt="{{ $item->heading_top }}" />
@@ -299,6 +300,7 @@ Our team is committed to precision at every stage — from capturing the smalles
     }, array_chunk(explode(' ', e($item->heading_middle)), 3))) !!}
 </div>
               </div>
+                </a>
             </div>
           @endforeach
         @else

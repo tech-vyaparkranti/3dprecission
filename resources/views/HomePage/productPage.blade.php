@@ -33,7 +33,10 @@
 
                         {{-- Dynamic Description --}}
                         <p style="color:black">{!! $service->long_description ?? 'No description available.' !!}</p>
+
+                        
                     </div>
+                    
 
                     {{-- RIGHT SIDEBAR --}}
                     <div class="sidebar-right">
@@ -67,9 +70,201 @@
                         </div>
                     </div>
                 </div> {{-- main-content --}}
-            </div> {{-- container --}}
+            </div> 
+            {{-- container --}}
         </div>
+        <style>
+/* Gallery container */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay on hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  color:white;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Search icon */
+.overlay i {
+  color: #ccc; /* default color */
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.overlay i:hover {
+  color: white;
+}
+
+/* Popup overlay */
+.image-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+
+/* Popup content */
+.popup-content {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+}
+
+.popup-content img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .popup-content img{
+    max-width:100%;
+    max-height:auto;
+  }
+  .popup-content {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+</style>
+
+
+{{-- ===== Dynamic Gallery with Swiper ===== --}}
+<div class="container py-5 gallery-container">
+    @php
+$galleryImages = !empty($service->gallery_images) ? $service->gallery_images : [];
+    @endphp
+
+    @if(!empty($galleryImages))
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                @foreach($galleryImages as $image)
+                    <div class="swiper-slide">
+                        <div class="gallery-item">
+                            <img src="{{ asset($image) }}" alt="Gallery Image">
+                            <div class="overlay" onclick="showPopup('{{ asset($image) }}')">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Swiper navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    @else
+        <p class="text-center">No gallery images available for this service.</p>
+    @endif
+</div>
+
+
+<!-- Popup -->
+<div class="image-popup" id="imagePopup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <img id="popupImage" src="" alt="Full Image">
+  </div>
+</div>
+{{-- Swiper CSS --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+{{-- Swiper JS --}}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+function showPopup(imageSrc) {
+  document.getElementById('popupImage').src = imageSrc;
+  document.getElementById('imagePopup').style.display = 'flex';
+  history.pushState(null, '', '/services');
+}
+
+function closePopup() {
+  document.getElementById('imagePopup').style.display = 'none';
+  history.pushState(null, '', '/services');
+}
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 }
+    }
+});
+</script>
+
+<style>
     </div>
+    
 </div>
 
 {{-- ===== CSS ===== --}}
