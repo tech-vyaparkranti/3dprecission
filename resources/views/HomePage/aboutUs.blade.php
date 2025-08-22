@@ -33,23 +33,23 @@ Our team is committed to precision at every stage — from capturing the smalles
 
 <div class="card-container">
     <div class="card ">
-      <img src="{{ $phylosophy_image1 ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753796204VALUE.jpg'}}" alt="Nature">
+      <img src="{{ $value_image ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753796204VALUE.jpg'}}" alt="Nature">
       <div class="card-body">
-        <p class="card-text">{!! $phylosophy_content1 ?? "This is a longer card with supporting text below as a natural lead-in to additional content.This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional content."!!}</p>
+        <p class="card-text">{!! $value_content ?? "This is a longer card with supporting text below as a natural lead-in to additional content.This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional content."!!}</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="{{ $phylosophy_image2 ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753795861VISION.jpg'}}" alt="Technology">
+      <img src="{{ $vision_image ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753795861VISION.jpg'}}" alt="Technology">
       <div class="card-body">
-        <p class="card-text">{!! $phylosophy_content2 ?? "This card has supporting text below as a natural lead-in to additional content." !!}</p>
+        <p class="card-text">{!! $vision_content ?? "This card has supporting text below as a natural lead-in to additional content." !!}</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="{{ $phylosophy_image3 ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753796170MISSION.jpg'}}" alt="Adventure">
+      <img src="{{ $value_image ?? 'https://dparch.co.in/website/uploads/WesiteElements/file_1753796170MISSION.jpg'}}" alt="Adventure">
       <div class="card-body">
-        <p class="card-text">{!! $phylosophy_content3 ?? "This is a wider card with supporting text below as a natural lead-in to additional content."!!}</p>
+        <p class="card-text">{!! $value_content ?? "This is a wider card with supporting text below as a natural lead-in to additional content."!!}</p>
       </div>
     </div>
 </div>
