@@ -509,16 +509,16 @@ Our team is committed to precision at every stage — from capturing the smalles
        <p>Oil and Gas</p>
     </div>
     <div class="industry-item">
-      <img class="icon-bounce" src="./assets/img/truck.png"/>
-      <p>Logistics</p>
+      <img class="icon-bounce" src="./assets/img/hydroelectric.png"/>
+      <p>Hydro Power Plant</p>
     </div>
     <div class="industry-item">
       <img class="icon-bounce" src="./assets/img/3d-object (1).png"/>
-      <p>Print</p>
+      <p>3D Printing</p>
     </div>
     <div class="industry-item">
      <img class="icon-bounce" src="./assets/img/electric-vehicle.png"/>
-       <p>Power</p>
+       <p>Thermal Power Plant</p>
     </div>
     <div class="industry-item">
      <img class="icon-bounce" src="./assets/img/cruise-ship.png"/>
@@ -526,11 +526,11 @@ Our team is committed to precision at every stage — from capturing the smalles
     </div>
     <div class="industry-item">
       <img class="icon-bounce" src="./assets/img/welder.png"/>
-      <p>Steel</p>
+      <p>Steel Plant</p>
     </div>
     <div class="industry-item">
       <img class="icon-bounce" src="./assets/img/laboratory.png"/>
-      <p>Chemical</p>
+      <p>Chemical Plant</p>
     </div>
   </div>
 </section>
