@@ -272,7 +272,7 @@ $('#compactContactUsForm').on('submit', function (e) {
 </script>
 </footer>
 
-<div class="copyright-section text-center p-3">&copy; <script>document.write( new Date().getFullYear() );</script>{{ isset($WebSetting['0']->copyright_txt) ? $WebSetting['0']->copyright_txt : '© 2024 All Rights Reserved by 3dprecission ' }}   & Developed by <a href="https://vyaparkranti.com/" class="" style="color:#ff6b35" aria-label="Digital Markating" alt="Vyapar Kranti">Vyapar kranti</a></div>
+<div class="copyright-section text-center p-3">&copy; <script>document.write( new Date().getFullYear() );</script>{{ isset($WebSetting['0']->copyright_txt) ? $WebSetting['0']->copyright_txt : 'All Rights Reserved by 3dprecission ' }}   & Developed by <a href="https://vyaparkranti.com/" class="" style="color:#ff6b35" aria-label="Digital Markating" alt="Vyapar Kranti">Vyapar kranti</a></div>
 <!-- Footer Section End-->
 <style>
         /* Demo content */
