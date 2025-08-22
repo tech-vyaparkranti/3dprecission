@@ -64,8 +64,8 @@
                             <h3>How Can We Help You?</h3>
                             <p>We can help you providing end-to-end solution as per your requirements. Consult our experts to know more.</p>
                             <div class="contact-details">
-                                <p>📞 +91-8010 28 8021</p>
-                                <p>📧 info@scanotech-informatics.com</p>
+                                <p>📞  +91 9990270002 || 9990750002</p>
+                                <p>📧 info@3dprecision.in</p>
                             </div>
                         </div>
                     </div>

@@ -23,8 +23,11 @@
 Our team is committed to precision at every stage — from capturing the smallest details to delivering complete, ready-to-use digital models. By combining technical excellence with transparency and customer-focused service, we ensure that every project meets the highest standards of accuracy and quality.' 
                             !!}
                         </p>
-                        <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">Read More</button>
-                    </div>
+<a href="{{ route('aboutUs') }}">
+    <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">
+        Read More
+    </button>
+</a>                    </div>
                 </div>
 
                 <!-- Image -->
@@ -308,11 +311,11 @@ Our team is committed to precision at every stage — from capturing the smalles
           <div class="swiper-slide">
             <div class="destinations-block">
               <div class="destinations-figure">
-                <img src="./assets/img/Basmati rice.jpeg" class="img-fluid" alt="Basmati Rice" />
+                <img src="./assets/img/Basmati rice.jpeg" class="img-fluid" alt="services" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Basmati Rice</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">services1</span>
               <div class="hover-overlay">
-                More details about <br> Basmati Rice
+                More details about <br> our services
               </div>
             </div>
           </div>
@@ -321,9 +324,9 @@ Our team is committed to precision at every stage — from capturing the smalles
               <div class="destinations-figure">
                 <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Ground Spices" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Ground Spices</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">services2</span>
               <div class="hover-overlay">
-                More details about <br> Ground Spices
+                More details about <br> our services
               </div>
             </div>
           </div>
@@ -332,9 +335,9 @@ Our team is committed to precision at every stage — from capturing the smalles
               <div class="destinations-figure">
                 <img src="./assets/img/Ground Spice.jpg" class="img-fluid" alt="Ground Spices" />
               </div>
-              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">Ground Spices</span>
+              <span class="destinations-title mh-auto text-center" style="background:#ff6b35; margin:0px; padding:20px; color:white">services3</span>
               <div class="hover-overlay">
-                More details about <br> Ground Spices
+                More details about <br> services
               </div>
             </div>
           </div>
