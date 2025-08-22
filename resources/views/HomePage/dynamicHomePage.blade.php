@@ -23,8 +23,11 @@
 Our team is committed to precision at every stage — from capturing the smallest details to delivering complete, ready-to-use digital models. By combining technical excellence with transparency and customer-focused service, we ensure that every project meets the highest standards of accuracy and quality.' 
                             !!}
                         </p>
-                        <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">Read More</button>
-                    </div>
+<a href="{{ route('aboutUs') }}">
+    <button style="background:linear-gradient(135deg, #ff6b35, #f7931e);padding:10px 25px;color:black;border:1px solid white;">
+        Read More
+    </button>
+</a>                    </div>
                 </div>
 
                 <!-- Image -->
