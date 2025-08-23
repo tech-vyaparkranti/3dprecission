@@ -118,7 +118,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12 pt-5 d-flex flex-column">
                     <div class="map-area flex-grow-1">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d224161.5644147442!2d76.85465537192303!3d28.61404008328529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s6%2F13%20%2C%20Pocket%201A%2C%20Sector%201A%2C%20Narela%20-110040!5e0!3m2!1sen!2sin!4v1749790146939!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3511.200813371878!2d77.2981389!3d28.352777799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDIxJzEwLjAiTiA3N8KwMTcnNTMuMyJF!5e0!3m2!1sen!2sin!4v1755950309962!5m2!1sen!2sin"
                             style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -127,7 +127,6 @@
         </div>
     </div>
 </div>
-
 <style>
 
 .contact-form-area, .map-area {
